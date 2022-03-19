@@ -1,4 +1,5 @@
 name: Push to S3
+on: [push]
 uses: mostlytyped/s3-put-action@v1.0.0
 with:
   args: --acl-public
