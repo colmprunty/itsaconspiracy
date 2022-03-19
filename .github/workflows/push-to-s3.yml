@@ -1,6 +1,7 @@
 name: Push to S3
 on: push
-  branches:
+  workflow_run:
+    branches:
       - main
 jobs:
   push_to_s3:
