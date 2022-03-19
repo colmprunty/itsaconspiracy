@@ -2,6 +2,7 @@ name: Push to S3
 on: push
 jobs:
   push_to_s3:
+    runs-on: ubuntu-latest
     steps:
       - name: "Push to S3"
         uses: mostlytyped/s3-put-action@v1.0.0
