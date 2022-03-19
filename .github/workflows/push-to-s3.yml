@@ -1,8 +1,5 @@
 name: Push to S3
 on: push
-  workflow_run:
-    branches:
-      - main
 jobs:
   push_to_s3:
     runs-on: ubuntu-latest
