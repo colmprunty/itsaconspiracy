@@ -14,8 +14,8 @@ jobs:
         with:
           args: --acl-public
         env:
-          LOCAL_FILE: index.html
-          REMOTE_FILE: ./index.html
+          LOCAL_FILE: dist/index.html
+          REMOTE_FILE: index.html
           AWS_ENDPOINT: ${{ secrets.AWS_ENDPOINT }}
           AWS_BUCKET: ${{ secrets.AWS_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
