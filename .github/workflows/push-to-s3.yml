@@ -1,18 +1,11 @@
 name: Push to S3
 on: push
 jobs:
-  whats_my_dir:
-    runs-on: ubuntu-latest
-    steps:
-      - name: "List dir"
-        run: ls -la
   push_to_s3:
-    runs-on: ubuntu-latest
+    runs-on: amazon/aws-cli
     steps:
       - name: "Push to S3"
-        uses: mostlytyped/s3-put-action@v1.0.0
-        with:
-          args: --acl-public
+        run: aws s3 ls
         env:
           LOCAL_FILE: dist/index.html
           REMOTE_FILE: index.html
