@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "List dir"
-      run: ls -la
+        run: ls -la
   push_to_s3:
     runs-on: ubuntu-latest
     steps:
