@@ -1,6 +1,11 @@
 name: Push to S3
 on: push
 jobs:
+  whats_my_dir:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "List dir"
+      run: ls -la
   push_to_s3:
     runs-on: ubuntu-latest
     steps:
@@ -9,7 +14,7 @@ jobs:
         with:
           args: --acl-public
         env:
-          LOCAL_FILE: ./index.html
+          LOCAL_FILE: index.html
           REMOTE_FILE: ./index.html
           AWS_ENDPOINT: ${{ secrets.AWS_ENDPOINT }}
           AWS_BUCKET: ${{ secrets.AWS_BUCKET }}
