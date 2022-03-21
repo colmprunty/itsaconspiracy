@@ -4,8 +4,8 @@ jobs:
   push_to_s3:
     runs-on: ubuntu-latest
     steps:
-        uses: chrislennon/action-aws-cli@v1.1
-        run: aws s3 ls
+      - uses: chrislennon/action-aws-cli@v1.1
+      - run: aws s3 ls
         env:
           AWS_ENDPOINT: ${{ secrets.AWS_ENDPOINT }}
           AWS_BUCKET: ${{ secrets.AWS_BUCKET }}
